@@ -63,12 +63,55 @@ else
   ok "origin added"
 fi
 branch=$(git rev-parse --abbrev-ref HEAD)
+
+# Read works anonymously on a public repo, so this separates "wrong URL" from
+# "not signed in". GitHub answers an unauthorised push with 404, not 403, so it
+# never reveals whether a repository exists — which is why a push 404 almost
+# always means credentials, not a missing repository.
+if ! git ls-remote origin >/dev/null 2>&1; then
+  die "cannot reach $(git remote get-url origin)
+  Check the URL. The repository name ends with a hyphen, and a copy-paste that
+  drops it gives exactly this."
+fi
+ok "remote reachable, so the URL is right"
+
 if [ -n "$(git ls-remote --heads origin 2>/dev/null)" ]; then
   warn "the remote already has branches — this will NOT force anything."
   warn "if the push is rejected, the remote has commits this history does not;"
   warn "decide deliberately rather than forcing."
 fi
-git push -u origin "$branch"
+
+if ! git push -u origin "$branch"; then
+  cat >&2 <<'HELP'
+
+  The push failed. If the error said 404, that is authentication, not a missing
+  repository: the repository is public and reachable, as the check above proved.
+  GitHub answers an unauthorised push with 404 so it never reveals private repos.
+
+  Easiest fix, on any operating system:
+
+      gh auth login            # choose GitHub.com, HTTPS, authenticate in browser
+      git push -u origin main
+
+  Without the GitHub CLI, use a personal access token as the password:
+
+      github.com -> Settings -> Developer settings -> Personal access tokens
+        Classic token:      tick the whole "repo" scope
+        Fine-grained token: under "Repository access" you MUST select this
+                            repository, and give it Contents: Read and write
+
+      git push -u origin main     # username: Maloth04, password: the token
+
+  If it fails again without even asking for a password, a stale credential is
+  cached. Clear it, then push again:
+
+      macOS     git credential-osxkeychain erase <<< $'protocol=https\nhost=github.com\n'
+      Windows   Credential Manager -> Windows Credentials -> remove git:https://github.com
+      Linux     git config --global --unset credential.helper
+
+HELP
+  die "push failed, see above"
+fi
 ok "pushed $branch"
 
 # ── 5. description and topics ───────────────────────────────────────────────
