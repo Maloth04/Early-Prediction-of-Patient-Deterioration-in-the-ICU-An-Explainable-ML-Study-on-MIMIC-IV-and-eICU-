@@ -39,8 +39,8 @@ analysis = ["xgboost>=2.0", "torch>=2.1", "shap>=0.44", "matplotlib>=3.8", "stat
 dev = ["pytest>=8.0", "ruff>=0.6"]
 
 [project.urls]
-Homepage = "https://github.com/OWNER/icu-early-deterioration"
-Issues = "https://github.com/OWNER/icu-early-deterioration/issues"
+Homepage = "https://github.com/Maloth04/Early-Prediction-of-Patient-Deterioration-in-the-ICU-An-Explainable-ML-Study-on-MIMIC-IV-and-eICU-"
+Issues = "https://github.com/Maloth04/Early-Prediction-of-Patient-Deterioration-in-the-ICU-An-Explainable-ML-Study-on-MIMIC-IV-and-eICU-/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]

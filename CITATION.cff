@@ -9,7 +9,7 @@ authors:
   - family-names: Maloth
     given-names: Shivaprasad
     affiliation: SRH University of Applied Sciences Heidelberg
-repository-code: 'https://github.com/OWNER/icu-early-deterioration'
+repository-code: 'https://github.com/Maloth04/Early-Prediction-of-Patient-Deterioration-in-the-ICU-An-Explainable-ML-Study-on-MIMIC-IV-and-eICU-'
 abstract: >-
   Analysis code for a Master's thesis on early prediction of a composite
   acute-escalation endpoint in MIMIC-IV v2.2, at four- and eight-hour horizons

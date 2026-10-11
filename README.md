@@ -1,6 +1,6 @@
 # Early prediction of acute treatment escalation in the ICU
 
-[![CI](https://github.com/OWNER/icu-early-deterioration/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/icu-early-deterioration/actions/workflows/ci.yml)
+[![CI](https://github.com/Maloth04/Early-Prediction-of-Patient-Deterioration-in-the-ICU-An-Explainable-ML-Study-on-MIMIC-IV-and-eICU-/actions/workflows/ci.yml/badge.svg)](https://github.com/Maloth04/Early-Prediction-of-Patient-Deterioration-in-the-ICU-An-Explainable-ML-Study-on-MIMIC-IV-and-eICU-/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/licence-MIT-green.svg)](LICENSE)
 [![Data: PhysioNet DUA](https://img.shields.io/badge/data-not%20redistributed-lightgrey.svg)](docs/data-access.md)
@@ -66,7 +66,7 @@ on the variance formula, and the whole test suite work from the counts the thesi
 reports.
 
 ```bash
-git clone https://github.com/OWNER/icu-early-deterioration
+git clone https://github.com/Maloth04/Early-Prediction-of-Patient-Deterioration-in-the-ICU-An-Explainable-ML-Study-on-MIMIC-IV-and-eICU-
 cd icu-early-deterioration
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
