@@ -1,0 +1,119 @@
+{
+ "full": {
+  "internal": {
+   "n": 52839,
+   "events": 415,
+   "prevalence_pct": 0.785,
+   "auroc": 0.7694,
+   "auroc_ci": [
+    0.7472,
+    0.7957
+   ],
+   "auroc_ci_width": 0.0485,
+   "auprc": 0.09507,
+   "slope": 1.0003,
+   "slope_ci": [
+    0.9397,
+    1.0744
+   ],
+   "intercept": 0.0189
+  },
+  "external": {
+   "n": 17776,
+   "events": 27,
+   "prevalence_pct": 0.152,
+   "auroc": 0.7155,
+   "auroc_ci": [
+    0.6185,
+    0.8006
+   ],
+   "auroc_ci_width": 0.1821,
+   "auprc": 0.00348,
+   "slope": 0.652,
+   "slope_ci": [
+    0.3317,
+    0.9246
+   ],
+   "intercept": -3.1541
+  },
+  "drop": 0.0539
+ },
+ "physiology": {
+  "internal": {
+   "n": 52839,
+   "events": 415,
+   "prevalence_pct": 0.785,
+   "auroc": 0.6995,
+   "auroc_ci": [
+    0.6749,
+    0.7244
+   ],
+   "auroc_ci_width": 0.0495,
+   "auprc": 0.02071,
+   "slope": 0.9546,
+   "slope_ci": [
+    0.7746,
+    0.9724
+   ],
+   "intercept": -0.1853
+  },
+  "external": {
+   "n": 17776,
+   "events": 27,
+   "prevalence_pct": 0.152,
+   "auroc": 0.6141,
+   "auroc_ci": [
+    0.5142,
+    0.7089
+   ],
+   "auroc_ci_width": 0.1947,
+   "auprc": 0.0026,
+   "slope": 0.433,
+   "slope_ci": [
+    0.0948,
+    1.2986
+   ],
+   "intercept": -4.2546
+  },
+  "drop": 0.0854
+ },
+ "behaviour": {
+  "internal": {
+   "n": 52839,
+   "events": 415,
+   "prevalence_pct": 0.785,
+   "auroc": 0.7062,
+   "auroc_ci": [
+    0.6773,
+    0.7333
+   ],
+   "auroc_ci_width": 0.056,
+   "auprc": 0.08852,
+   "slope": 1.0374,
+   "slope_ci": [
+    0.9437,
+    1.1349
+   ],
+   "intercept": 0.1998
+  },
+  "external": {
+   "n": 17776,
+   "events": 27,
+   "prevalence_pct": 0.152,
+   "auroc": 0.6421,
+   "auroc_ci": [
+    0.5238,
+    0.7542
+   ],
+   "auroc_ci_width": 0.2304,
+   "auprc": 0.00668,
+   "slope": 0.4339,
+   "slope_ci": [
+    0.0605,
+    0.8533
+   ],
+   "intercept": -4.0909
+  },
+  "drop": 0.0641
+ }
+}

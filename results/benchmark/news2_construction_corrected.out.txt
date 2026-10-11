@@ -1,0 +1,14 @@
+instances 263,675   events 2,080   rate 0.789 per cent
+
+construction     AUROC  median   >=5 %   >=7 %   ev@>=5   ev@>=7
+worst           0.6219     8.0    88.1    66.7     0.84     0.95
+mean            0.6243     2.0    13.1     2.4     1.56     2.05
+end             0.6462     2.0    16.0     3.8     1.69     2.46
+
+paired over five patient-level folds, same folds for every construction
+  worst-in-24h AUROC       0.6217 (SD 0.0080)
+  mean  minus worst       +0.0025 (SD 0.0098), 3 of 5 folds positive
+  end   minus worst       +0.0243 (SD 0.0097), 5 of 5 folds positive
+
+  increment over the benchmark: 0.186 reported for worst-in-24h, 0.162 implied for end-of-window
+  (the difference is measured here and applied to the reported increment; the original per-window score vectors were not retained)

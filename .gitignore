@@ -1,0 +1,57 @@
+# ── Patient data: never, under any circumstance ──────────────────────────────
+# The PhysioNet Data Use Agreement forbids redistributing MIMIC-IV or eICU
+# record-level data. Everything derived from it that is not aggregate stays out.
+data/*
+!data/README.md
+!data/.gitkeep
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.dta
+*.sav
+!results/**/*.csv
+# ── Credentials ──────────────────────────────────────────────────────────────
+.env
+.env.*
+*.pem
+*.key
+service-account*.json
+gcloud-*.json
+application_default_credentials.json
+# ── Large regenerable artefacts ──────────────────────────────────────────────
+models/*
+!models/.gitkeep
+runs/*
+!runs/.gitkeep
+*.pt
+*.pth
+*.pkl
+*.joblib
+*.ubj
+*.bin
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.env/
+.tox/
+.nox/
+# ── Tooling ──────────────────────────────────────────────────────────────────
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+requirements-lock.txt
+# ── Editors and OS ───────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

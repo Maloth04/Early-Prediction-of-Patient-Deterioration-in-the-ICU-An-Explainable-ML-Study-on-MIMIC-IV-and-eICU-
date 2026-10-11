@@ -1,0 +1,23 @@
+analytic 95% width at 27 events, AUROC 0.749: 0.214
+measured bootstrap width, Section 4.12.1:     0.207   -> difference 0.007
+
+  80% power, two sample: 675 events
+  80% power, one sample: 266 events
+  90% power, two sample: 1,892 events
+  90% power, one sample: 356 events
+
+     27 events: CI width 0.219, smallest detectable fall 0.162 (two-sample) / 0.157 (one-sample)
+     29 events: CI width 0.212, smallest detectable fall 0.156 (two-sample) / 0.151 (one-sample)
+     48 events: CI width 0.165, smallest detectable fall 0.124 (two-sample) / 0.118 (one-sample)
+    150 events: CI width 0.093, smallest detectable fall 0.077 (two-sample) / 0.067 (one-sample)
+    266 events: CI width 0.070, smallest detectable fall 0.063 (two-sample) / 0.050 (one-sample)
+    642 events: CI width 0.045, smallest detectable fall 0.051 (two-sample) / 0.032 (one-sample)
+
+internal split alone bounds the two-sample test at 0.039; no external
+sample size goes below it. External variance equals internal at 438 events.
+
+full release, 2,152 projected events: CI width 0.025, smallest detectable fall 0.043 / 0.018
+
+27 events vs chance: 4 h z = 4.56, p = 5.2e-06; 8 h z = 3.20, p = 1.4e-03
+
+written precision.json

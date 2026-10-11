@@ -1,0 +1,18 @@
+# Decisions log
+
+One line per decision that would be hard to reconstruct later: what was decided,
+when, and why. The deviation register records what changed against the proposal;
+this records why, including for decisions that were not deviations.
+
+Started retrospectively on 2026-10-11, which is itself the lesson — see
+[archiving-checklist.md](archiving-checklist.md).
+
+| Date | Decision | Reason |
+|---|---|---|
+| 2026-10-11 | Keep `analysis/` scripts exactly as they ran, defects included; corrections go in `_corrected` companions | The thesis cites their output. Editing them in place would make the repository disagree with the document it is the record of. |
+| 2026-10-11 | Fix the NEWS2 band boundaries in the shared package but not in the original script | 13.9 % of windows scored differently. §4.3.5's conclusions survive, two of its quoted figures do not; both states are now reproducible and the difference is in `CHANGELOG.md`. |
+| 2026-10-11 | CI installs the core only, not `requirements.txt` | The pinned environment pulls torch and the CUDA stack. Every test runs without a deep-learning stack or PhysioNet data, so CI stays under a minute and runs on three Python versions. |
+| 2026-10-11 | Make "no patient data committed" a CI job, not just `.gitignore` | `.gitignore` is a convenience and can be bypassed with `git add -f`. The DUA is an obligation, so it gets a check that fails the build. |
+| 2026-10-11 | Validate `config.yaml` on load rather than trusting it | A single source of truth that nothing checks is a comment. The feature lists must imply 81 predictors and the GRU shape must match the 14 source variables. |
+| 2026-10-11 | `record_run()` never raises | It is called after an experiment finishes, so a crash loses provenance that cannot be regenerated. A missing package is recorded as missing. |
+| 2026-10-06 | Submit with the eICU execution reported as a pipeline test, not as a test of H2b | 27 post-landmark events against the 266 the registered criterion requires. Treating it as confirmatory would have been the one indefensible move available. |

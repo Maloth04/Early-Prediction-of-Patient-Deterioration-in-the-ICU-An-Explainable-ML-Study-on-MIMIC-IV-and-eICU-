@@ -1,0 +1,70 @@
+{
+ "4h": {
+  "test_instances": 52839,
+  "test_events": 415,
+  "81_full": {
+   "n_predictors": 81,
+   "auroc": 0.7671,
+   "auprc": 0.0991
+  },
+  "81_benchmark": {
+   "n_predictors": 65,
+   "auroc": 0.7528,
+   "auprc": 0.0627
+  },
+  "81_physiology": {
+   "n_predictors": 53,
+   "auroc": 0.6997,
+   "auprc": 0.0244
+  },
+  "75_full": {
+   "n_predictors": 75,
+   "auroc": 0.7694,
+   "auprc": 0.0951
+  },
+  "75_benchmark": {
+   "n_predictors": 61,
+   "auroc": 0.751,
+   "auprc": 0.0622
+  },
+  "75_physiology": {
+   "n_predictors": 49,
+   "auroc": 0.6995,
+   "auprc": 0.0207
+  }
+ },
+ "8h": {
+  "test_instances": 25285,
+  "test_events": 360,
+  "81_full": {
+   "n_predictors": 81,
+   "auroc": 0.7413,
+   "auprc": 0.1112
+  },
+  "81_benchmark": {
+   "n_predictors": 65,
+   "auroc": 0.7133,
+   "auprc": 0.0635
+  },
+  "81_physiology": {
+   "n_predictors": 53,
+   "auroc": 0.6615,
+   "auprc": 0.0359
+  },
+  "75_full": {
+   "n_predictors": 75,
+   "auroc": 0.7333,
+   "auprc": 0.1046
+  },
+  "75_benchmark": {
+   "n_predictors": 61,
+   "auroc": 0.7058,
+   "auprc": 0.0622
+  },
+  "75_physiology": {
+   "n_predictors": 49,
+   "auroc": 0.6611,
+   "auprc": 0.031
+  }
+ }
+}

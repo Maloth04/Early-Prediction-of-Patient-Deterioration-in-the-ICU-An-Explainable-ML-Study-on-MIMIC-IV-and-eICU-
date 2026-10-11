@@ -1,0 +1,58 @@
+name: Reproduction question
+description: A number you could not reproduce, or a figure that disagrees with the thesis
+labels: ["reproduction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A disagreement with a reported figure is the most useful issue this
+        repository can receive. Please be specific enough that it can be checked.
+  - type: input
+    id: location
+    attributes:
+      label: Which figure
+      description: Section, table or file, e.g. "Table 4.41, four-hour full model".
+      placeholder: Table 4.10, NEWS2 AUROC
+    validations: { required: true }
+  - type: input
+    id: reported
+    attributes:
+      label: Value reported
+      placeholder: "0.597"
+    validations: { required: true }
+  - type: input
+    id: obtained
+    attributes:
+      label: Value you obtained
+      placeholder: "0.625"
+    validations: { required: true }
+  - type: textarea
+    id: how
+    attributes:
+      label: How you obtained it
+      description: Script and arguments, or the steps you took.
+      render: shell
+    validations: { required: true }
+  - type: dropdown
+    id: data
+    attributes:
+      label: Which data
+      options:
+        - No data (counts only, e.g. precision.py)
+        - MIMIC-IV v2.2, my own extraction
+        - eICU demonstration release
+        - Other or unsure
+    validations: { required: true }
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Output of `python -c "import sys,platform;print(sys.version,platform.platform())"`, or the `runs/*.json` from `record_run()`.
+      render: shell
+  - type: checkboxes
+    id: no-data
+    attributes:
+      label: Before you post
+      options:
+        - label: I have not pasted patient-level data into this issue.
+          required: true

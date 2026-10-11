@@ -1,0 +1,62 @@
+{
+ "internal_se": 0.0139,
+ "ratio_eicu": 657.4,
+ "ratio_mimic": 125.8,
+ "analytic_width_at_27": 0.214,
+ "events_eicu_80pct_two_sample": 675,
+ "events_eicu_80pct_one_sample": 266,
+ "events_eicu_90pct_two_sample": 1892,
+ "events_eicu_90pct_one_sample": 356,
+ "events_mimic_prevalence_80pct_two_sample": 678,
+ "events_mimic_prevalence_80pct_one_sample": 267,
+ "events_mimic_prevalence_90pct_two_sample": 1899,
+ "events_mimic_prevalence_90pct_one_sample": 357,
+ "n27": {
+  "ci_width": 0.219,
+  "mde_two_sample": 0.162,
+  "mde_one_sample": 0.157
+ },
+ "n29": {
+  "ci_width": 0.212,
+  "mde_two_sample": 0.156,
+  "mde_one_sample": 0.151
+ },
+ "n48": {
+  "ci_width": 0.165,
+  "mde_two_sample": 0.124,
+  "mde_one_sample": 0.118
+ },
+ "n150": {
+  "ci_width": 0.093,
+  "mde_two_sample": 0.077,
+  "mde_one_sample": 0.067
+ },
+ "n266": {
+  "ci_width": 0.07,
+  "mde_two_sample": 0.063,
+  "mde_one_sample": 0.05
+ },
+ "n642": {
+  "ci_width": 0.045,
+  "mde_two_sample": 0.051,
+  "mde_one_sample": 0.032
+ },
+ "internal_floor_mde": 0.039,
+ "events_where_variances_equal": 438,
+ "full_release": {
+  "projected_events": 2152,
+  "ci_width": 0.025,
+  "mde_two_sample": 0.043,
+  "mde_one_sample": 0.018
+ },
+ "above_chance_4h": {
+  "auroc": 0.749,
+  "z": 4.56,
+  "p": 5.15970503944807e-06
+ },
+ "above_chance_8h": {
+  "auroc": 0.683,
+  "z": 3.2,
+  "p": 0.0013517177613489029
+ }
+}

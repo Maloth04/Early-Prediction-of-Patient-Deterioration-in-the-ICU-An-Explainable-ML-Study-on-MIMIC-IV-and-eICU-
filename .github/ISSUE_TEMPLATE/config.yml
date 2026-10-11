@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Getting access to the data
+    url: https://physionet.org/content/mimiciv/
+    about: MIMIC-IV needs your own PhysioNet credentialed access. No data is distributed here, and none can be shared.
+  - name: What does and does not reproduce
+    url: https://github.com/OWNER/icu-early-deterioration/blob/main/docs/reproducibility.md
+    about: Read this before reporting that a figure will not reproduce — two limitations are known and documented.

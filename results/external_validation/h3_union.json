@@ -1,0 +1,108 @@
+{
+ "4h": {
+  "mean_abs": {
+   "rho_all75": 0.9882,
+   "rho_union_top15": 0.8824,
+   "union_size": 18,
+   "top5_overlap": 4,
+   "top15_overlap": 12,
+   "beh_share_internal": 0.3641,
+   "beh_share_external": 0.3635,
+   "top5_internal": [
+    "lactate_time_since_obs_h",
+    "heart_rate_time_since_obs_h",
+    "wbc_time_since_obs_h",
+    "resp_rate_mean",
+    "mbp_abp_time_since_obs_h"
+   ],
+   "top5_external": [
+    "lactate_time_since_obs_h",
+    "wbc_time_since_obs_h",
+    "resp_rate_mean",
+    "mbp_abp_time_since_obs_h",
+    "spo2_min"
+   ]
+  },
+  "centred": {
+   "rho_all75": 0.9693,
+   "rho_union_top15": 0.7255,
+   "union_size": 17,
+   "top5_overlap": 3,
+   "top15_overlap": 13,
+   "beh_share_internal": 0.3297,
+   "beh_share_external": 0.3196,
+   "top5_internal": [
+    "wbc_time_since_obs_h",
+    "heart_rate_time_since_obs_h",
+    "lactate_time_since_obs_h",
+    "resp_rate_mean",
+    "spo2_min"
+   ],
+   "top5_external": [
+    "wbc_time_since_obs_h",
+    "resp_rate_mean",
+    "spo2_min",
+    "sbp_nbp_max",
+    "mbp_abp_time_since_obs_h"
+   ]
+  },
+  "union_ci_mean_abs": [
+   0.87,
+   0.9154
+  ],
+  "union_frac_above_0.7": 1.0
+ },
+ "8h": {
+  "mean_abs": {
+   "rho_all75": 0.9366,
+   "rho_union_top15": 0.0571,
+   "union_size": 21,
+   "top5_overlap": 1,
+   "top15_overlap": 9,
+   "beh_share_internal": 0.3428,
+   "beh_share_external": 0.3634,
+   "top5_internal": [
+    "lactate_time_since_obs_h",
+    "wbc_time_since_obs_h",
+    "resp_rate_mean",
+    "spo2_min",
+    "heart_rate_time_since_obs_h"
+   ],
+   "top5_external": [
+    "heart_rate_trend",
+    "mbp_abp_time_since_obs_h",
+    "resp_rate_trend",
+    "wbc_time_since_obs_h",
+    "dbp_abp_time_since_obs_h"
+   ]
+  },
+  "centred": {
+   "rho_all75": 0.944,
+   "rho_union_top15": -0.1429,
+   "union_size": 20,
+   "top5_overlap": 2,
+   "top15_overlap": 10,
+   "beh_share_internal": 0.3212,
+   "beh_share_external": 0.3064,
+   "top5_internal": [
+    "wbc_time_since_obs_h",
+    "resp_rate_mean",
+    "lactate_time_since_obs_h",
+    "heart_rate_time_since_obs_h",
+    "spo2_min"
+   ],
+   "top5_external": [
+    "heart_rate_trend",
+    "resp_rate_trend",
+    "wbc_time_since_obs_h",
+    "resp_rate_time_since_obs_h",
+    "resp_rate_mean"
+   ]
+  },
+  "union_ci_mean_abs": [
+   0.0247,
+   0.1024
+  ],
+  "union_frac_above_0.7": 0.0
+ }
+}

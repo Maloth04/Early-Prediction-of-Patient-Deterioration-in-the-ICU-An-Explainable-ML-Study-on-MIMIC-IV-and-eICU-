@@ -1,0 +1,178 @@
+{
+  "4h": {
+    "behaviour_sub": {
+      "recency": {
+        "mean": 0.7255209692303437,
+        "sd": 0.014425487394693343
+      },
+      "presence": {
+        "mean": 0.666163253556345,
+        "sd": 0.01799385556681021
+      },
+      "both": {
+        "mean": 0.7265597273273736,
+        "sd": 0.013118065763589327
+      }
+    },
+    "presence_mechanism": [
+      {
+        "variable": "lactate",
+        "pct_present": 20.3,
+        "rate_present": 1.785,
+        "rate_absent": 0.536,
+        "ratio": 3.33
+      },
+      {
+        "variable": "temp_c",
+        "pct_present": 1.3,
+        "rate_present": 1.801,
+        "rate_absent": 0.776,
+        "ratio": 2.32
+      },
+      {
+        "variable": "wbc",
+        "pct_present": 90.4,
+        "rate_present": 0.834,
+        "rate_absent": 0.362,
+        "ratio": 2.3
+      },
+      {
+        "variable": "creatinine",
+        "pct_present": 91.6,
+        "rate_present": 0.827,
+        "rate_absent": 0.373,
+        "ratio": 2.22
+      },
+      {
+        "variable": "mbp_abp",
+        "pct_present": 13.6,
+        "rate_present": 1.478,
+        "rate_absent": 0.68,
+        "ratio": 2.17
+      },
+      {
+        "variable": "sbp_abp",
+        "pct_present": 13.5,
+        "rate_present": 1.451,
+        "rate_absent": 0.685,
+        "ratio": 2.12
+      },
+      {
+        "variable": "dbp_abp",
+        "pct_present": 13.5,
+        "rate_present": 1.45,
+        "rate_absent": 0.685,
+        "ratio": 2.12
+      },
+      {
+        "variable": "resp_rate",
+        "pct_present": 98.2,
+        "rate_present": 0.793,
+        "rate_absent": 0.58,
+        "ratio": 1.37
+      },
+      {
+        "variable": "spo2",
+        "pct_present": 98.6,
+        "rate_present": 0.791,
+        "rate_absent": 0.654,
+        "ratio": 1.21
+      },
+      {
+        "variable": "heart_rate",
+        "pct_present": 98.7,
+        "rate_present": 0.79,
+        "rate_absent": 0.689,
+        "ratio": 1.15
+      },
+      {
+        "variable": "temp_f",
+        "pct_present": 98.1,
+        "rate_present": 0.783,
+        "rate_absent": 1.081,
+        "ratio": 0.72
+      },
+      {
+        "variable": "sbp_nbp",
+        "pct_present": 94.3,
+        "rate_present": 0.764,
+        "rate_absent": 1.198,
+        "ratio": 0.64
+      },
+      {
+        "variable": "dbp_nbp",
+        "pct_present": 94.3,
+        "rate_present": 0.764,
+        "rate_absent": 1.195,
+        "ratio": 0.64
+      },
+      {
+        "variable": "mbp_nbp",
+        "pct_present": 94.3,
+        "rate_present": 0.764,
+        "rate_absent": 1.198,
+        "ratio": 0.64
+      }
+    ],
+    "alarm_burden": [
+      {
+        "sensitivity": 90,
+        "alerts_per_1000_instances": 674.3,
+        "ppv_pct": 1.13,
+        "number_needed_to_alert": 89,
+        "alerts_per_bed_day": 4.05,
+        "alerts_20_bed_unit_per_day": 81
+      },
+      {
+        "sensitivity": 80,
+        "alerts_per_1000_instances": 418.8,
+        "ppv_pct": 1.62,
+        "number_needed_to_alert": 62,
+        "alerts_per_bed_day": 2.51,
+        "alerts_20_bed_unit_per_day": 50
+      },
+      {
+        "sensitivity": 70,
+        "alerts_per_1000_instances": 306.3,
+        "ppv_pct": 1.93,
+        "number_needed_to_alert": 52,
+        "alerts_per_bed_day": 1.84,
+        "alerts_20_bed_unit_per_day": 37
+      },
+      {
+        "sensitivity": 60,
+        "alerts_per_1000_instances": 199.3,
+        "ppv_pct": 2.55,
+        "number_needed_to_alert": 39,
+        "alerts_per_bed_day": 1.2,
+        "alerts_20_bed_unit_per_day": 24
+      },
+      {
+        "sensitivity": 50,
+        "alerts_per_1000_instances": 128.5,
+        "ppv_pct": 3.3,
+        "number_needed_to_alert": 30,
+        "alerts_per_bed_day": 0.77,
+        "alerts_20_bed_unit_per_day": 15
+      }
+    ],
+    "burden_test_instances": 52141,
+    "burden_test_events": 441
+  },
+  "8h": {
+    "behaviour_sub": {
+      "recency": {
+        "mean": 0.7092195690641632,
+        "sd": 0.009666284923628955
+      },
+      "presence": {
+        "mean": 0.6503869723725403,
+        "sd": 0.007615451406662006
+      },
+      "both": {
+        "mean": 0.708444391836099,
+        "sd": 0.008829359927239384
+      }
+    }
+  }
+}

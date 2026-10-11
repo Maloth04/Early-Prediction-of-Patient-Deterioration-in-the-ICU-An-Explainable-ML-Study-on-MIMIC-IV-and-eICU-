@@ -1,0 +1,96 @@
+[
+ {
+  "var": "heart_rate",
+  "kind": "vital",
+  "rec_mimic": 0.54,
+  "rec_eicu": 0.07,
+  "spread_mimic": 27.0,
+  "spread_eicu": 35.0,
+  "obs_mimic": 98.7,
+  "obs_eicu": 96.6
+ },
+ {
+  "var": "resp_rate",
+  "kind": "vital",
+  "rec_mimic": 0.55,
+  "rec_eicu": 0.07,
+  "spread_mimic": 14.0,
+  "spread_eicu": 19.0,
+  "obs_mimic": 98.2,
+  "obs_eicu": 81.4
+ },
+ {
+  "var": "spo2",
+  "kind": "vital",
+  "rec_mimic": 0.56,
+  "rec_eicu": 0.07,
+  "spread_mimic": 7.0,
+  "spread_eicu": 11.0,
+  "obs_mimic": 98.6,
+  "obs_eicu": 94.1
+ },
+ {
+  "var": "sbp_nbp",
+  "kind": "vital",
+  "rec_mimic": 0.64,
+  "rec_eicu": 0.45,
+  "spread_mimic": 43.0,
+  "spread_eicu": 56.0,
+  "obs_mimic": 94.3,
+  "obs_eicu": 93.5
+ },
+ {
+  "var": "mbp_nbp",
+  "kind": "vital",
+  "rec_mimic": 0.64,
+  "rec_eicu": 0.45,
+  "spread_mimic": 35.0,
+  "spread_eicu": 44.0,
+  "obs_mimic": 94.3,
+  "obs_eicu": 93.6
+ },
+ {
+  "var": "sbp_abp",
+  "kind": "vital",
+  "rec_mimic": 7.75,
+  "rec_eicu": 7.37,
+  "spread_mimic": 45.0,
+  "spread_eicu": 81.0,
+  "obs_mimic": 13.5,
+  "obs_eicu": 14.3
+ },
+ {
+  "var": "temp_f",
+  "kind": "vital",
+  "rec_mimic": 2.06,
+  "rec_eicu": 0.08,
+  "spread_mimic": 1.1,
+  "spread_eicu": 2.3,
+  "obs_mimic": 98.1,
+  "obs_eicu": 8.7
+ },
+ {
+  "var": "lactate",
+  "kind": "lab",
+  "rec_mimic": 42.62,
+  "rec_eicu": 51.89,
+  "obs_mimic": 20.3,
+  "obs_eicu": 9.1
+ },
+ {
+  "var": "creatinine",
+  "kind": "lab",
+  "rec_mimic": 9.57,
+  "rec_eicu": 12.6,
+  "obs_mimic": 91.6,
+  "obs_eicu": 85.1
+ },
+ {
+  "var": "wbc",
+  "kind": "lab",
+  "rec_mimic": 10.95,
+  "rec_eicu": 14.07,
+  "obs_mimic": 90.4,
+  "obs_eicu": 80.7
+ }
+]

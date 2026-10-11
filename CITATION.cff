@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+title: >-
+  Early prediction of acute treatment escalation in the ICU: analysis code
+message: >-
+  If you use this code or build on the measurement-behaviour decomposition,
+  please cite both the software and the thesis.
+type: software
+authors:
+  - family-names: Maloth
+    given-names: Shivaprasad
+    affiliation: SRH University of Applied Sciences Heidelberg
+repository-code: 'https://github.com/OWNER/icu-early-deterioration'
+abstract: >-
+  Analysis code for a Master's thesis on early prediction of a composite
+  acute-escalation endpoint in MIMIC-IV v2.2, at four- and eight-hour horizons
+  from a 24-hour observation window. Its contribution is a reporting procedure:
+  a feature block recording only measurement behaviour, with no clinical values,
+  is reported alongside the full model, and recovers roughly three quarters of
+  above-chance discrimination on its own. Geographic external validation was not
+  delivered and no transport claim is made.
+keywords:
+  - clinical deterioration
+  - intensive care
+  - clinical prediction model
+  - explainability
+  - informative missingness
+  - MIMIC-IV
+license: MIT
+version: 1.0.0
+date-released: '2026-10-11'
+references:
+  - type: thesis
+    title: >-
+      Early Prediction of Patient Deterioration in the ICU: An Explainable ML
+      Study on MIMIC-IV / eICU
+    authors:
+      - family-names: Maloth
+        given-names: Shivaprasad
+    thesis-type: "Master's thesis"
+    institution:
+      name: SRH University of Applied Sciences Heidelberg
+    year: 2026
+  - type: article
+    title: >-
+      The meaning and use of the area under a receiver operating characteristic
+      (ROC) curve
+    authors:
+      - family-names: Hanley
+        given-names: James A.
+      - family-names: McNeil
+        given-names: Barbara J.
+    journal: Radiology
+    volume: '143'
+    issue: '1'
+    start: 29
+    end: 36
+    year: 1982
+    doi: 10.1148/radiology.143.1.7063747

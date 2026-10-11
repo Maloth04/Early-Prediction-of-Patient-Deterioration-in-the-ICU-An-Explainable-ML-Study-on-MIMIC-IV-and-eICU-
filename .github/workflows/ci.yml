@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: tests (python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+
+      # Deliberately NOT requirements.txt: that is the pinned research
+      # environment and pulls torch with the whole CUDA stack. Every test here
+      # runs without PhysioNet data and without a deep-learning stack, so CI
+      # installs the core only and stays under a minute.
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Lint
+        run: python -m ruff check .
+
+      - name: Format check
+        run: python -m ruff format --check src tests
+
+      - name: Syntax-check the published analyses
+        # They are excluded from style rules because they are the record of what
+        # ran, but they still have to parse.
+        run: python -m compileall -q analysis
+
+      - name: Tests
+        run: python -m pytest -q
+
+  no-patient-data:
+    name: no patient data committed
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # The PhysioNet Data Use Agreement forbids redistribution. .gitignore is a
+      # convenience; this is the check. It fails the build rather than warning.
+      - name: Refuse record-level data
+        run: |
+          set -euo pipefail
+          offenders=$(git ls-files \
+            | grep -Ei '\.(csv|tsv|parquet|feather|dta|sav|pkl|joblib|pt|pth)$' \
+            | grep -v '^results/' || true)
+          if [ -n "$offenders" ]; then
+            echo "::error::data-shaped files are tracked; the DUA forbids redistributing record-level data"
+            echo "$offenders"
+            exit 1
+          fi
+          echo "no data-shaped files outside results/"
+
+      - name: Refuse credentials
+        run: |
+          set -euo pipefail
+          offenders=$(git ls-files | grep -Ei '(^|/)(\.env|.*service-account.*\.json|.*credentials.*\.json)$' || true)
+          if [ -n "$offenders" ]; then
+            echo "::error::credential-shaped files are tracked"
+            echo "$offenders"
+            exit 1
+          fi
+          echo "no credential-shaped files"

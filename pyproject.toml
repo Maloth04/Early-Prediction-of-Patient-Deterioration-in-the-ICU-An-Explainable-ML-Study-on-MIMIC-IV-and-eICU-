@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "icu-deterioration"
+version = "1.0.0"
+description = "Early prediction of acute treatment escalation in the ICU, and what a model adds beyond the care record"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Shivaprasad Maloth" }]
+keywords = [
+    "clinical-deterioration",
+    "intensive-care",
+    "clinical-prediction-model",
+    "explainability",
+    "informative-missingness",
+    "mimic-iv",
+]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "scikit-learn>=1.3",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+# What the full analyses need on top of the core, pinned in requirements.txt.
+analysis = ["xgboost>=2.0", "torch>=2.1", "shap>=0.44", "matplotlib>=3.8", "statsmodels>=0.14"]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.urls]
+Homepage = "https://github.com/OWNER/icu-early-deterioration"
+Issues = "https://github.com/OWNER/icu-early-deterioration/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers --strict-config"
+filterwarnings = ["error::DeprecationWarning:icu_deterioration.*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+# The thesis analyses are published as they ran. Reformatting them would make the
+# repository disagree with the figures it is the record of, so they are excluded
+# from style enforcement and only syntax-checked in CI.
+extend-exclude = ["analysis"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
+ignore = [
+    "E501",    # line length is handled by the formatter
+    "RUF001",  # the prose in docstrings uses typographic punctuation deliberately
+    "RUF002",
+    "RUF003",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B011"]

@@ -1,0 +1,71 @@
+{
+ "full_75": {
+  "auroc_mean": 0.7737,
+  "auroc_sd": 0.009,
+  "drop_mean": 0.0,
+  "drop_sd": 0.0,
+  "drop_min": 0.0,
+  "drop_max": 0.0,
+  "splits_positive": 0,
+  "per_split": [
+   0.7679,
+   0.7718,
+   0.7641,
+   0.7869,
+   0.7779
+  ]
+ },
+ "minus_4_continuous_recency": {
+  "auroc_mean": 0.7551,
+  "auroc_sd": 0.0089,
+  "drop_mean": 0.0186,
+  "drop_sd": 0.0033,
+  "drop_min": 0.0143,
+  "drop_max": 0.022,
+  "splits_positive": 5,
+  "per_split": [
+   0.752,
+   0.7575,
+   0.7421,
+   0.7662,
+   0.7578
+  ]
+ },
+ "minus_8_continuous_behaviour": {
+  "auroc_mean": 0.755,
+  "auroc_sd": 0.0113,
+  "drop_mean": 0.0187,
+  "drop_sd": 0.0041,
+  "drop_min": 0.0139,
+  "drop_max": 0.0232,
+  "splits_positive": 5,
+  "per_split": [
+   0.754,
+   0.7486,
+   0.7416,
+   0.7716,
+   0.7593
+  ]
+ },
+ "minus_26_behaviour": {
+  "auroc_mean": 0.7011,
+  "auroc_sd": 0.0131,
+  "drop_mean": 0.0726,
+  "drop_sd": 0.006,
+  "drop_min": 0.0653,
+  "drop_max": 0.0798,
+  "splits_positive": 5,
+  "per_split": [
+   0.7001,
+   0.692,
+   0.6879,
+   0.7216,
+   0.704
+  ]
+ },
+ "subset_vs_superset": {
+  "mean": -0.0001,
+  "sd": 0.0053,
+  "splits_positive": 3
+ }
+}

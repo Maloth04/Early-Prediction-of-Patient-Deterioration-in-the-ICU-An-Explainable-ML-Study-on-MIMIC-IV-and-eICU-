@@ -1,0 +1,314 @@
+{
+ "4h": {
+  "continuous-vitals recency": {
+   "n_predictors": 4,
+   "mimic_internal_auroc": 0.6109782724084512,
+   "above_chance": 0.111,
+   "eicu_spread": {
+    "heart_rate": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 3.0000000000000004,
+     "mimic_median_min": 32.000001668930054,
+     "mimic_iqr_min": 31.99999991525574
+    },
+    "resp_rate": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 3.0000000000000004,
+     "mimic_median_min": 32.800047397613525,
+     "mimic_iqr_min": 32.91662514209747
+    },
+    "spo2": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 1.9999999999999982,
+     "mimic_median_min": 33.133299350738525,
+     "mimic_iqr_min": 33.600095894668584
+    },
+    "temp_c": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 3.0000000000000004,
+     "mimic_median_min": 121.48339748382568,
+     "mimic_iqr_min": 130.54981112480164
+    }
+   }
+  },
+  "blood-pressure recency": {
+   "n_predictors": 3,
+   "mimic_internal_auroc": 0.5772547462050346,
+   "above_chance": 0.0773,
+   "eicu_spread": {
+    "sbp": {
+     "eicu_median_min": 25.999999999999996,
+     "eicu_iqr_min": 41.0,
+     "mimic_median_min": 34.999998807907104,
+     "mimic_iqr_min": 35.683350563049316
+    },
+    "dbp": {
+     "eicu_median_min": 25.999999999999996,
+     "eicu_iqr_min": 41.0,
+     "mimic_median_min": 34.999998807907104,
+     "mimic_iqr_min": 35.69995164871216
+    },
+    "mbp": {
+     "eicu_median_min": 25.999999999999996,
+     "eicu_iqr_min": 41.0,
+     "mimic_median_min": 35.06664991378784,
+     "mimic_iqr_min": 35.61669945716858
+    }
+   }
+  },
+  "laboratory recency": {
+   "n_predictors": 3,
+   "mimic_internal_auroc": 0.65425882644218,
+   "above_chance": 0.1543,
+   "eicu_spread": {
+    "lactate": {
+     "eicu_median_min": 920.0,
+     "eicu_iqr_min": 676.0,
+     "mimic_median_min": 664.9833869934083,
+     "mimic_iqr_min": 812.7625751495361
+    },
+    "creatinine": {
+     "eicu_median_min": 663.0,
+     "eicu_iqr_min": 675.7500000000001,
+     "mimic_median_min": 517.00831078125,
+     "mimic_iqr_min": 643.616616
+    },
+    "wbc": {
+     "eicu_median_min": 703.0000000000001,
+     "eicu_iqr_min": 650.0,
+     "mimic_median_min": 584.0000399999999,
+     "mimic_iqr_min": 696.9791704632569
+    }
+   }
+  },
+  "laboratory presence": {
+   "n_predictors": 3,
+   "mimic_internal_auroc": 0.6204847250840837,
+   "above_chance": 0.1205,
+   "eicu_spread": {}
+  },
+  "all measurement behaviour": {
+   "n_predictors": 20,
+   "mimic_internal_auroc": 0.6856133649385596,
+   "above_chance": 0.1856,
+   "eicu_spread": {
+    "heart_rate": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 3.0000000000000004,
+     "mimic_median_min": 32.000001668930054,
+     "mimic_iqr_min": 31.99999991525574
+    },
+    "resp_rate": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 3.0000000000000004,
+     "mimic_median_min": 32.800047397613525,
+     "mimic_iqr_min": 32.91662514209747
+    },
+    "spo2": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 1.9999999999999982,
+     "mimic_median_min": 33.133299350738525,
+     "mimic_iqr_min": 33.600095894668584
+    },
+    "sbp": {
+     "eicu_median_min": 25.999999999999996,
+     "eicu_iqr_min": 41.0,
+     "mimic_median_min": 34.999998807907104,
+     "mimic_iqr_min": 35.683350563049316
+    },
+    "dbp": {
+     "eicu_median_min": 25.999999999999996,
+     "eicu_iqr_min": 41.0,
+     "mimic_median_min": 34.999998807907104,
+     "mimic_iqr_min": 35.69995164871216
+    },
+    "mbp": {
+     "eicu_median_min": 25.999999999999996,
+     "eicu_iqr_min": 41.0,
+     "mimic_median_min": 35.06664991378784,
+     "mimic_iqr_min": 35.61669945716858
+    },
+    "temp_c": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 3.0000000000000004,
+     "mimic_median_min": 121.48339748382568,
+     "mimic_iqr_min": 130.54981112480164
+    },
+    "lactate": {
+     "eicu_median_min": 920.0,
+     "eicu_iqr_min": 676.0,
+     "mimic_median_min": 664.9833869934083,
+     "mimic_iqr_min": 812.7625751495361
+    },
+    "creatinine": {
+     "eicu_median_min": 663.0,
+     "eicu_iqr_min": 675.7500000000001,
+     "mimic_median_min": 517.00831078125,
+     "mimic_iqr_min": 643.616616
+    },
+    "wbc": {
+     "eicu_median_min": 703.0000000000001,
+     "eicu_iqr_min": 650.0,
+     "mimic_median_min": 584.0000399999999,
+     "mimic_iqr_min": 696.9791704632569
+    }
+   }
+  }
+ },
+ "8h": {
+  "continuous-vitals recency": {
+   "n_predictors": 4,
+   "mimic_internal_auroc": 0.583313207623356,
+   "above_chance": 0.0833,
+   "eicu_spread": {
+    "heart_rate": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 3.0000000000000004,
+     "mimic_median_min": 32.000001668930054,
+     "mimic_iqr_min": 32.03320384025574
+    },
+    "resp_rate": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 3.0000000000000004,
+     "mimic_median_min": 32.666627168655396,
+     "mimic_iqr_min": 32.96667516231537
+    },
+    "spo2": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 1.9999999999999982,
+     "mimic_median_min": 33.00000071525574,
+     "mimic_iqr_min": 33.55004847049713
+    },
+    "temp_c": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 3.0000000000000004,
+     "mimic_median_min": 120.99999904632568,
+     "mimic_iqr_min": 130.68310260772702
+    }
+   }
+  },
+  "blood-pressure recency": {
+   "n_predictors": 3,
+   "mimic_internal_auroc": 0.5570248101439347,
+   "above_chance": 0.057,
+   "eicu_spread": {
+    "sbp": {
+     "eicu_median_min": 25.0,
+     "eicu_iqr_min": 40.0,
+     "mimic_median_min": 34.999998807907104,
+     "mimic_iqr_min": 35.716552734375
+    },
+    "dbp": {
+     "eicu_median_min": 25.0,
+     "eicu_iqr_min": 40.0,
+     "mimic_median_min": 34.999998807907104,
+     "mimic_iqr_min": 35.716552734375
+    },
+    "mbp": {
+     "eicu_median_min": 25.0,
+     "eicu_iqr_min": 40.0,
+     "mimic_median_min": 34.999998807907104,
+     "mimic_iqr_min": 35.650023221969604
+    }
+   }
+  },
+  "laboratory recency": {
+   "n_predictors": 3,
+   "mimic_internal_auroc": 0.6350226459832901,
+   "above_chance": 0.135,
+   "eicu_spread": {
+    "lactate": {
+     "eicu_median_min": 901.9999999999999,
+     "eicu_iqr_min": 686.0,
+     "mimic_median_min": 681.3333892822266,
+     "mimic_iqr_min": 824.8749876022341
+    },
+    "creatinine": {
+     "eicu_median_min": 674.5,
+     "eicu_iqr_min": 672.0000000000001,
+     "mimic_median_min": 522.9999732971191,
+     "mimic_iqr_min": 666.9834
+    },
+    "wbc": {
+     "eicu_median_min": 721.9999999999999,
+     "eicu_iqr_min": 647.0,
+     "mimic_median_min": 599.3832778930663,
+     "mimic_iqr_min": 714.8417799810791
+    }
+   }
+  },
+  "laboratory presence": {
+   "n_predictors": 3,
+   "mimic_internal_auroc": 0.6071107462893196,
+   "above_chance": 0.1071,
+   "eicu_spread": {}
+  },
+  "all measurement behaviour": {
+   "n_predictors": 20,
+   "mimic_internal_auroc": 0.6688823822122145,
+   "above_chance": 0.1689,
+   "eicu_spread": {
+    "heart_rate": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 3.0000000000000004,
+     "mimic_median_min": 32.000001668930054,
+     "mimic_iqr_min": 32.03320384025574
+    },
+    "resp_rate": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 3.0000000000000004,
+     "mimic_median_min": 32.666627168655396,
+     "mimic_iqr_min": 32.96667516231537
+    },
+    "spo2": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 1.9999999999999982,
+     "mimic_median_min": 33.00000071525574,
+     "mimic_iqr_min": 33.55004847049713
+    },
+    "sbp": {
+     "eicu_median_min": 25.0,
+     "eicu_iqr_min": 40.0,
+     "mimic_median_min": 34.999998807907104,
+     "mimic_iqr_min": 35.716552734375
+    },
+    "dbp": {
+     "eicu_median_min": 25.0,
+     "eicu_iqr_min": 40.0,
+     "mimic_median_min": 34.999998807907104,
+     "mimic_iqr_min": 35.716552734375
+    },
+    "mbp": {
+     "eicu_median_min": 25.0,
+     "eicu_iqr_min": 40.0,
+     "mimic_median_min": 34.999998807907104,
+     "mimic_iqr_min": 35.650023221969604
+    },
+    "temp_c": {
+     "eicu_median_min": 3.9999999999999956,
+     "eicu_iqr_min": 3.0000000000000004,
+     "mimic_median_min": 120.99999904632568,
+     "mimic_iqr_min": 130.68310260772702
+    },
+    "lactate": {
+     "eicu_median_min": 901.9999999999999,
+     "eicu_iqr_min": 686.0,
+     "mimic_median_min": 681.3333892822266,
+     "mimic_iqr_min": 824.8749876022341
+    },
+    "creatinine": {
+     "eicu_median_min": 674.5,
+     "eicu_iqr_min": 672.0000000000001,
+     "mimic_median_min": 522.9999732971191,
+     "mimic_iqr_min": 666.9834
+    },
+    "wbc": {
+     "eicu_median_min": 721.9999999999999,
+     "eicu_iqr_min": 647.0,
+     "mimic_median_min": 599.3832778930663,
+     "mimic_iqr_min": 714.8417799810791
+    }
+   }
+  }
+ }
+}

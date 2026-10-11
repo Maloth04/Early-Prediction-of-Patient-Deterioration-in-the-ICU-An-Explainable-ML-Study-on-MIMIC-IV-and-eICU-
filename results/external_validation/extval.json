@@ -1,0 +1,137 @@
+{
+ "cohort": {
+  "eligible_stays": 1455,
+  "stays_with_endpoint": 202,
+  "excluded_pre_landmark": 173,
+  "modelled_stays": 1282,
+  "instances": 17776,
+  "events": 27,
+  "prevalence_pct": 0.1519
+ },
+ "development": {
+  "instances": 263675,
+  "events": 2080,
+  "prevalence_pct": 0.7888
+ },
+ "full": {
+  "internal": {
+   "n": 52839,
+   "events": 415,
+   "prevalence_pct": 0.7854,
+   "auroc": 0.7671,
+   "auroc_ci": [
+    0.7403,
+    0.7939
+   ],
+   "auroc_ci_width": 0.0537,
+   "auprc": 0.09912,
+   "auprc_lift_over_prevalence": 12.62,
+   "slope_raw": 0.9635,
+   "intercept_raw": -4.1175,
+   "slope_recalibrated": 0.956,
+   "intercept_recalibrated": -0.1715
+  },
+  "external": {
+   "n": 17776,
+   "events": 27,
+   "prevalence_pct": 0.1519,
+   "auroc": 0.6638,
+   "auroc_ci": [
+    0.5512,
+    0.7764
+   ],
+   "auroc_ci_width": 0.2252,
+   "auprc": 0.00279,
+   "auprc_lift_over_prevalence": 1.84,
+   "slope_raw": 0.506,
+   "intercept_raw": -5.7839,
+   "slope_recalibrated": 0.479,
+   "intercept_recalibrated": -3.8742
+  },
+  "delta_auroc_external_minus_internal": -0.1033
+ },
+ "physiology": {
+  "internal": {
+   "n": 52839,
+   "events": 415,
+   "prevalence_pct": 0.7854,
+   "auroc": 0.6997,
+   "auroc_ci": [
+    0.6713,
+    0.728
+   ],
+   "auroc_ci_width": 0.0567,
+   "auprc": 0.02443,
+   "auprc_lift_over_prevalence": 3.11,
+   "slope_raw": 0.7991,
+   "intercept_raw": -4.2962,
+   "slope_recalibrated": 0.9529,
+   "intercept_recalibrated": -0.184
+  },
+  "external": {
+   "n": 17776,
+   "events": 27,
+   "prevalence_pct": 0.1519,
+   "auroc": 0.5438,
+   "auroc_ci": [
+    0.4322,
+    0.6554
+   ],
+   "auroc_ci_width": 0.2232,
+   "auprc": 0.00214,
+   "auprc_lift_over_prevalence": 1.41,
+   "slope_raw": 0.226,
+   "intercept_raw": -6.1353,
+   "slope_recalibrated": 0.1745,
+   "intercept_recalibrated": -5.5267
+  },
+  "delta_auroc_external_minus_internal": -0.1559
+ },
+ "behaviour": {
+  "internal": {
+   "n": 52839,
+   "events": 415,
+   "prevalence_pct": 0.7854,
+   "auroc": 0.6955,
+   "auroc_ci": [
+    0.6671,
+    0.7239
+   ],
+   "auroc_ci_width": 0.0568,
+   "auprc": 0.0898,
+   "auprc_lift_over_prevalence": 11.43,
+   "slope_raw": 0.8303,
+   "intercept_raw": -4.4286,
+   "slope_recalibrated": 1.0277,
+   "intercept_recalibrated": 0.1644
+  },
+  "external": {
+   "n": 17776,
+   "events": 27,
+   "prevalence_pct": 0.1519,
+   "auroc": 0.644,
+   "auroc_ci": [
+    0.5309,
+    0.7571
+   ],
+   "auroc_ci_width": 0.2262,
+   "auprc": 0.00491,
+   "auprc_lift_over_prevalence": 3.23,
+   "slope_raw": 0.3949,
+   "intercept_raw": -5.983,
+   "slope_recalibrated": 0.4604,
+   "intercept_recalibrated": -3.9811
+  },
+  "delta_auroc_external_minus_internal": -0.0515
+ },
+ "shares_pct": {
+  "internal": {
+   "physiology": 74.8,
+   "behaviour": 73.2
+  },
+  "external": {
+   "physiology": 26.7,
+   "behaviour": 87.9
+  }
+ }
+}

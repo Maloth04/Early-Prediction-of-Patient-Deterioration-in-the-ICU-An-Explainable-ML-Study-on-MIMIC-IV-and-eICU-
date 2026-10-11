@@ -1,0 +1,22 @@
+{
+ "4h": {
+  "centred_union_rho": 0.7255,
+  "union_size": 17,
+  "ci": [
+   0.6286,
+   0.7562
+  ],
+  "frac_above_0.7": 0.794,
+  "registered_rule_met": false
+ },
+ "8h": {
+  "centred_union_rho": -0.1429,
+  "union_size": 20,
+  "ci": [
+   -0.1609,
+   -0.0603
+  ],
+  "frac_above_0.7": 0.0,
+  "registered_rule_met": false
+ }
+}

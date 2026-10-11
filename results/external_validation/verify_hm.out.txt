@@ -1,0 +1,13 @@
+AUC 0.719  n+= 150 n-= 2000  empirical SD 0.02136  Hanley-McNeil 0.02420  ratio 0.883  (mean AUROC 0.7185)
+AUC 0.719  n+=  27 n-= 1800  empirical SD 0.04982  Hanley-McNeil 0.05618  ratio 0.887  (mean AUROC 0.7208)
+AUC 0.719  n+= 150 n-= 9000  empirical SD 0.02084  Hanley-McNeil 0.02384  ratio 0.874  (mean AUROC 0.7193)
+AUC 0.769  n+= 150 n-= 2000  empirical SD 0.01937  Hanley-McNeil 0.02306  ratio 0.840  (mean AUROC 0.7691)
+AUC 0.769  n+=  27 n-= 1800  empirical SD 0.04467  Hanley-McNeil 0.05367  ratio 0.832  (mean AUROC 0.7678)
+AUC 0.769  n+= 150 n-= 9000  empirical SD 0.01902  Hanley-McNeil 0.02277  ratio 0.835  (mean AUROC 0.7685)
+
+   Hanley-McNeil: 80% power needs   266 events (one-sample),    675 (two-sample)
+ binormal-scaled: 80% power needs   207 events (one-sample),    358 (two-sample)
+  n=  150    Hanley-McNeil: MDE 0.067 (one-sample) / 0.077 (two-sample)
+  n=  150  binormal-scaled: MDE 0.059 (one-sample) / 0.067 (two-sample)
+  n= 2152    Hanley-McNeil: MDE 0.018 (one-sample) / 0.043 (two-sample)
+  n= 2152  binormal-scaled: MDE 0.015 (one-sample) / 0.036 (two-sample)

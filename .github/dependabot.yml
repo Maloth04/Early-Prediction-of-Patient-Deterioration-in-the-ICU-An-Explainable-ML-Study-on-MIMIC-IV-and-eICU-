@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: "/"
+    schedule: { interval: monthly }
+    open-pull-requests-limit: 5
+    labels: ["dependencies"]
+    # requirements.txt is the pinned environment the reported figures were produced
+    # in. Bumping it can change a number, so those updates are grouped and reviewed
+    # together rather than merged one at a time.
+    groups:
+      research-environment:
+        patterns: ["*"]
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule: { interval: monthly }
+    labels: ["dependencies"]

@@ -1,0 +1,56 @@
+# Single source of truth for every setting. Change values HERE, never inside code.
+# Values below are taken from the ICU deterioration thesis (Chapter 3), EXCEPT where marked
+# NEW. Edit for a new study.
+project:
+  name: icu_deterioration
+  python: '3.12'                 # NEW. The thesis itself ran on 3.11; four pins in
+                                 # requirements.txt need >=3.12, so this pack cannot rebuild
+                                 # the thesis environment. Set 3.11 and unpin if that is the aim.
+  seed: 42                       # NEW, not a thesis value: the thesis records its seed values as
+                                 # not recoverable (Appendix D). Do not cite this as what it used.
+                                 # Choose once for new work, never change mid-study.
+data:
+  source: MIMIC-IV
+  version: v2.2                  # always a versioned name; unversioned BigQuery aliases point to v3.1
+  bigquery_datasets:
+    icu: physionet-data.mimiciv_v2_2_icu
+    hosp: physionet-data.mimiciv_v2_2_hosp
+  external_cohort: eICU-CRD      # full release needed; demo release (2,520 stays) is too small
+windowing:
+  observation_hours: 24
+  landmark_hours: 24
+  horizons_hours: [4, 8]
+  min_age: 18
+  min_stay_hours_above_landmark: 4   # stay must outlast landmark + horizon: >=28 h at the 4 h
+                                     # horizon (73,141 -> 57,702 -> 52,128 in Table 4.1).
+                                     # Cohort-defining and missing from the original config.
+  tiling: non_overlapping
+  exit_on_first_event: true
+endpoint:                        # composite: first of the three
+  components: [vasopressor_or_inotrope_start, invasive_ventilation_start, resuscitation_event]
+features:
+  vitals: [hr, rr, spo2, nibp_sys, nibp_dia, nibp_mean, art_sys, art_dia, art_mean, temp_c, temp_f]
+  labs: [lactate, creatinine, wbc]
+  vital_stats: [mean, min, max, trend]
+  lab_stats: [mean, min, max]
+  behaviour: [missing_flag, hours_since_last]
+  expected_predictor_count: 81   # (11*4 + 3*3) + (14*2); fail loudly if the built matrix differs
+split:
+  unit: patient                  # never split by window
+  n_splits: 5                    # the thesis used 5 for the decomposition and benchmark and
+  n_splits_subgroup: 10          # 10 for subgroup and stability work; one value cannot be the
+                                 # single source of truth for both, so both are named
+  test_size: 0.2
+  temporal_holdout: true
+models:
+  xgboost: {search: random, n_trials: 30, cv_folds: 2, planned_trials: 100, planned_folds: 3}
+  gru:     {search: random, n_trials: 12, input_shape: [24, 14], early_stopping: true}
+  class_imbalance: class_weighting
+evaluation:
+  primary_metric: auroc
+  secondary_metrics: [auprc, brier, calibration_slope, calibration_intercept]
+  bootstrap: {h1_resamples: 500, shap_resamples: 200, level: patient}
+  practical_threshold_auroc: 0.02
+  calibration_slope: {acceptable: [0.9, 1.1], warning: [0.8, 1.2]}
+  shap_stability_rho_threshold: 0.7
+  alpha: 0.05

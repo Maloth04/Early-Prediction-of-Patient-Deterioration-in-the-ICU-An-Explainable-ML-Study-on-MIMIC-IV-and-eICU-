@@ -1,0 +1,284 @@
+{
+  "4h": {
+    "specified": {
+      "full": {
+        "auroc_mean": 0.7829081698252586,
+        "auroc_sd": 0.011531620953807057,
+        "auprc_mean": 0.11662102855224706,
+        "auprc_sd": 0.006385489052955099
+      },
+      "phys": {
+        "auroc_mean": 0.7109658532641624,
+        "auroc_sd": 0.008994404481633035,
+        "auprc_mean": 0.02599065499922239,
+        "auprc_sd": 0.002606517744793914
+      },
+      "beh": {
+        "auroc_mean": 0.7234105484539195,
+        "auroc_sd": 0.014745593105496902,
+        "auprc_mean": 0.11069121221254105,
+        "auprc_sd": 0.011215345763151157
+      },
+      "beh_minus_phys": {
+        "mean": 0.01244469518975715,
+        "sd": 0.014292795877162149,
+        "per_split": [
+          0.0271,
+          -0.0014,
+          -0.0077,
+          0.0187,
+          0.0256
+        ],
+        "splits_positive": 3,
+        "n": 5
+      },
+      "behaviour_share_of_above_chance": {
+        "mean": 0.7900382785470261,
+        "sd": 0.048344742906495417
+      }
+    },
+    "corrected": {
+      "full": {
+        "auroc_mean": 0.7977971922982554,
+        "auroc_sd": 0.010978237953764586,
+        "auprc_mean": 0.11285245462185459,
+        "auprc_sd": 0.007886708405105977
+      },
+      "phys": {
+        "auroc_mean": 0.7361970514158583,
+        "auroc_sd": 0.009379223894789696,
+        "auprc_mean": 0.038581906522848035,
+        "auprc_sd": 0.002455581978021675
+      },
+      "beh": {
+        "auroc_mean": 0.7240038958877093,
+        "auroc_sd": 0.013425088709802155,
+        "auprc_mean": 0.10177671417566714,
+        "auprc_sd": 0.009916732204983028
+      },
+      "beh_minus_phys": {
+        "mean": -0.01219315552814897,
+        "sd": 0.014964862578931272,
+        "per_split": [
+          -0.0099,
+          -0.026,
+          -0.0325,
+          0.0019,
+          0.0055
+        ],
+        "splits_positive": 2,
+        "n": 5
+      },
+      "behaviour_share_of_above_chance": {
+        "mean": 0.7520610182349348,
+        "sd": 0.032279091595927865
+      }
+    },
+    "per_unit": {
+      "Trauma SICU (TSICU)": {
+        "auroc_mean": 0.7465921955526473,
+        "auroc_sd": 0.018554815657728728,
+        "splits": 5,
+        "median_instances": 4567,
+        "median_events": 56
+      },
+      "Medical Intensive Care Unit (MICU)": {
+        "auroc_mean": 0.7214752929925556,
+        "auroc_sd": 0.03138676792962187,
+        "splits": 5,
+        "median_instances": 10267,
+        "median_events": 102
+      },
+      "Medical/Surgical Intensive Care Unit (MICU/SICU)": {
+        "auroc_mean": 0.7342260692813365,
+        "auroc_sd": 0.031352081810819325,
+        "splits": 5,
+        "median_instances": 9359,
+        "median_events": 59
+      },
+      "Coronary Care Unit (CCU)": {
+        "auroc_mean": 0.8132320795866667,
+        "auroc_sd": 0.014359519282439384,
+        "splits": 5,
+        "median_instances": 6990,
+        "median_events": 67
+      },
+      "Cardiac Vascular Intensive Care Unit (CVICU)": {
+        "auroc_mean": 0.8535546413049847,
+        "auroc_sd": 0.02651975083745152,
+        "splits": 5,
+        "median_instances": 2830,
+        "median_events": 47
+      },
+      "Surgical Intensive Care Unit (SICU)": {
+        "auroc_mean": 0.7572006511770978,
+        "auroc_sd": 0.02738266945585805,
+        "splits": 5,
+        "median_instances": 8690,
+        "median_events": 78
+      },
+      "Neuro Surgical Intensive Care Unit (Neuro SICU)": {
+        "auroc_mean": 0.7383346683426252,
+        "auroc_sd": 0.08114761655540535,
+        "splits": 3,
+        "median_instances": 3042,
+        "median_events": 8
+      },
+      "Neuro Intermediate": {
+        "auroc_mean": 0.8131277388846535,
+        "auroc_sd": 0.02777811509432047,
+        "splits": 3,
+        "median_instances": 5314,
+        "median_events": 7
+      },
+      "Neuro Stepdown": {
+        "auroc_mean": 0.847941901441908,
+        "auroc_sd": 0.06299012176141554,
+        "splits": 3,
+        "median_instances": 1584,
+        "median_events": 5
+      }
+    }
+  },
+  "8h": {
+    "specified": {
+      "full": {
+        "auroc_mean": 0.7589046812801262,
+        "auroc_sd": 0.011389467144539119,
+        "auprc_mean": 0.12364972307481563,
+        "auprc_sd": 0.015706111296289623
+      },
+      "phys": {
+        "auroc_mean": 0.6849794482081719,
+        "auroc_sd": 0.012753324126598485,
+        "auprc_mean": 0.042720703152537766,
+        "auprc_sd": 0.00338492142298555
+      },
+      "beh": {
+        "auroc_mean": 0.7080130821456345,
+        "auroc_sd": 0.00886042923518144,
+        "auprc_mean": 0.10495547136519864,
+        "auprc_sd": 0.007663157959388836
+      },
+      "beh_minus_phys": {
+        "mean": 0.02303363393746256,
+        "sd": 0.01612167254659928,
+        "per_split": [
+          0.0298,
+          0.0172,
+          -0.0058,
+          0.037,
+          0.037
+        ],
+        "splits_positive": 4,
+        "n": 5
+      },
+      "behaviour_share_of_above_chance": {
+        "mean": 0.8042184094150586,
+        "sd": 0.03498276284870214
+      }
+    },
+    "corrected": {
+      "full": {
+        "auroc_mean": 0.7605030695647925,
+        "auroc_sd": 0.012741214469825176,
+        "auprc_mean": 0.12875283770472104,
+        "auprc_sd": 0.015664930167297492
+      },
+      "phys": {
+        "auroc_mean": 0.6998300093742864,
+        "auroc_sd": 0.007633035078162587,
+        "auprc_mean": 0.05166496249329396,
+        "auprc_sd": 0.0042210333299832325
+      },
+      "beh": {
+        "auroc_mean": 0.6879971626096243,
+        "auroc_sd": 0.01235605658450371,
+        "auprc_mean": 0.1023139592667492,
+        "auprc_sd": 0.008493998559223299
+      },
+      "beh_minus_phys": {
+        "mean": -0.011832846764662097,
+        "sd": 0.013346255224985296,
+        "per_split": [
+          -0.0211,
+          -0.0003,
+          -0.0306,
+          -0.0133,
+          0.006
+        ],
+        "splits_positive": 1,
+        "n": 5
+      },
+      "behaviour_share_of_above_chance": {
+        "mean": 0.7219069654609186,
+        "sd": 0.036404550745114575
+      }
+    },
+    "per_unit": {
+      "Coronary Care Unit (CCU)": {
+        "auroc_mean": 0.8001504334243462,
+        "auroc_sd": 0.04732811604319867,
+        "splits": 5,
+        "median_instances": 3233,
+        "median_events": 61
+      },
+      "Medical/Surgical Intensive Care Unit (MICU/SICU)": {
+        "auroc_mean": 0.6545916137951115,
+        "auroc_sd": 0.03803357155916355,
+        "splits": 5,
+        "median_instances": 4419,
+        "median_events": 66
+      },
+      "Medical Intensive Care Unit (MICU)": {
+        "auroc_mean": 0.7346602094788282,
+        "auroc_sd": 0.033455827462268245,
+        "splits": 5,
+        "median_instances": 4770,
+        "median_events": 89
+      },
+      "Trauma SICU (TSICU)": {
+        "auroc_mean": 0.7164911708284759,
+        "auroc_sd": 0.03001968541346442,
+        "splits": 5,
+        "median_instances": 2057,
+        "median_events": 49
+      },
+      "Cardiac Vascular Intensive Care Unit (CVICU)": {
+        "auroc_mean": 0.7820269593528545,
+        "auroc_sd": 0.03891601358593384,
+        "splits": 5,
+        "median_instances": 1388,
+        "median_events": 43
+      },
+      "Surgical Intensive Care Unit (SICU)": {
+        "auroc_mean": 0.736642336077037,
+        "auroc_sd": 0.01656665001097821,
+        "splits": 5,
+        "median_instances": 4236,
+        "median_events": 72
+      },
+      "Neuro Surgical Intensive Care Unit (Neuro SICU)": {
+        "auroc_mean": 0.7877009463448524,
+        "auroc_sd": 0.0975905590228643,
+        "splits": 4,
+        "median_instances": 1603,
+        "median_events": 8
+      },
+      "Neuro Intermediate": {
+        "auroc_mean": 0.7953612552508652,
+        "auroc_sd": 0.057211785262352724,
+        "splits": 3,
+        "median_instances": 2378,
+        "median_events": 6
+      },
+      "Neuro Stepdown": {
+        "auroc_mean": 0.8009338102280681,
+        "auroc_sd": 0.08857256440416472,
+        "splits": 2,
+        "median_instances": 960,
+        "median_events": 8
+      }
+    }
+  }
+}

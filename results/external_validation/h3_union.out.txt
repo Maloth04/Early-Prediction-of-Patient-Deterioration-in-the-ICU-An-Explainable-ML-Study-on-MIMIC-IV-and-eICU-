@@ -1,0 +1,33 @@
+=== 4h / mean_abs ===
+  rho over all 75          0.9882
+  rho over union of top-15 0.8824   (union = 18 features)  vs registered 0.7 -> PASS
+  top-5 overlap 4/5, top-15 12/15
+  behaviour share  internal 36.4% -> external 36.4%
+  internal top5 ['lactate_time_since_obs_h', 'heart_rate_time_since_obs_h', 'wbc_time_since_obs_h', 'resp_rate_mean', 'mbp_abp_time_since_obs_h']
+  external top5 ['lactate_time_since_obs_h', 'wbc_time_since_obs_h', 'resp_rate_mean', 'mbp_abp_time_since_obs_h', 'spo2_min']
+=== 4h / centred ===
+  rho over all 75          0.9693
+  rho over union of top-15 0.7255   (union = 17 features)  vs registered 0.7 -> PASS
+  top-5 overlap 3/5, top-15 13/15
+  behaviour share  internal 33.0% -> external 32.0%
+  internal top5 ['wbc_time_since_obs_h', 'heart_rate_time_since_obs_h', 'lactate_time_since_obs_h', 'resp_rate_mean', 'spo2_min']
+  external top5 ['wbc_time_since_obs_h', 'resp_rate_mean', 'spo2_min', 'sbp_nbp_max', 'mbp_abp_time_since_obs_h']
+  registered statistic, clustered bootstrap: [0.870, 0.915], 100.0% of resamples at or above 0.7
+
+=== 8h / mean_abs ===
+  rho over all 75          0.9366
+  rho over union of top-15 0.0571   (union = 21 features)  vs registered 0.7 -> FAIL
+  top-5 overlap 1/5, top-15 9/15
+  behaviour share  internal 34.3% -> external 36.3%
+  internal top5 ['lactate_time_since_obs_h', 'wbc_time_since_obs_h', 'resp_rate_mean', 'spo2_min', 'heart_rate_time_since_obs_h']
+  external top5 ['heart_rate_trend', 'mbp_abp_time_since_obs_h', 'resp_rate_trend', 'wbc_time_since_obs_h', 'dbp_abp_time_since_obs_h']
+=== 8h / centred ===
+  rho over all 75          0.9440
+  rho over union of top-15 -0.1429   (union = 20 features)  vs registered 0.7 -> FAIL
+  top-5 overlap 2/5, top-15 10/15
+  behaviour share  internal 32.1% -> external 30.6%
+  internal top5 ['wbc_time_since_obs_h', 'resp_rate_mean', 'lactate_time_since_obs_h', 'heart_rate_time_since_obs_h', 'spo2_min']
+  external top5 ['heart_rate_trend', 'resp_rate_trend', 'wbc_time_since_obs_h', 'resp_rate_time_since_obs_h', 'resp_rate_mean']
+  registered statistic, clustered bootstrap: [0.025, 0.102], 0.0% of resamples at or above 0.7
+
+written h3_union.json

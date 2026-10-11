@@ -1,0 +1,33 @@
+name: Bug report
+description: Something in the code is broken
+labels: ["bug"]
+body:
+  - type: input
+    id: script
+    attributes:
+      label: Which file
+      placeholder: src/icu_deterioration/news2.py
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you ran, what you expected, what you got.
+    validations: { required: true }
+  - type: textarea
+    id: traceback
+    attributes:
+      label: Traceback or output
+      render: shell
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.12.4"
+  - type: checkboxes
+    id: no-data
+    attributes:
+      label: Before you post
+      options:
+        - label: I have not pasted patient-level data into this issue.
+          required: true

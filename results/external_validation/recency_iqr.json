@@ -1,0 +1,93 @@
+[
+ {
+  "var": "heart_rate",
+  "mimic_iqr_min": 32.0,
+  "eicu_iqr_min": 3.0,
+  "ratio": 0.09,
+  "verdict": "no (grid)"
+ },
+ {
+  "var": "resp_rate",
+  "mimic_iqr_min": 32.9,
+  "eicu_iqr_min": 3.0,
+  "ratio": 0.09,
+  "verdict": "no (grid)"
+ },
+ {
+  "var": "spo2",
+  "mimic_iqr_min": 33.6,
+  "eicu_iqr_min": 3.0,
+  "ratio": 0.09,
+  "verdict": "no (grid)"
+ },
+ {
+  "var": "temp_c",
+  "mimic_iqr_min": 540.9,
+  "eicu_iqr_min": 2.0,
+  "ratio": 0.0,
+  "verdict": "no (grid)"
+ },
+ {
+  "var": "sbp_abp",
+  "mimic_iqr_min": 382.5,
+  "eicu_iqr_min": 127.0,
+  "ratio": 0.33,
+  "verdict": "partly"
+ },
+ {
+  "var": "dbp_abp",
+  "mimic_iqr_min": 384.4,
+  "eicu_iqr_min": 127.0,
+  "ratio": 0.33,
+  "verdict": "partly"
+ },
+ {
+  "var": "mbp_abp",
+  "mimic_iqr_min": 390.5,
+  "eicu_iqr_min": 134.0,
+  "ratio": 0.34,
+  "verdict": "partly"
+ },
+ {
+  "var": "sbp_nbp",
+  "mimic_iqr_min": 37.8,
+  "eicu_iqr_min": 38.0,
+  "ratio": 1.0,
+  "verdict": "yes"
+ },
+ {
+  "var": "dbp_nbp",
+  "mimic_iqr_min": 37.8,
+  "eicu_iqr_min": 38.0,
+  "ratio": 1.0,
+  "verdict": "yes"
+ },
+ {
+  "var": "mbp_nbp",
+  "mimic_iqr_min": 37.7,
+  "eicu_iqr_min": 38.0,
+  "ratio": 1.01,
+  "verdict": "yes"
+ },
+ {
+  "var": "lactate",
+  "mimic_iqr_min": 812.8,
+  "eicu_iqr_min": 763.8,
+  "ratio": 0.94,
+  "verdict": "yes"
+ },
+ {
+  "var": "creatinine",
+  "mimic_iqr_min": 643.6,
+  "eicu_iqr_min": 727.0,
+  "ratio": 1.13,
+  "verdict": "yes"
+ },
+ {
+  "var": "wbc",
+  "mimic_iqr_min": 697.0,
+  "eicu_iqr_min": 725.0,
+  "ratio": 1.04,
+  "verdict": "yes"
+ }
+]

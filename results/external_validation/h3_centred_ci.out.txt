@@ -1,0 +1,3 @@
+4h: centred union rho 0.7255 (union of 17), clustered 95% interval [0.629, 0.756], 79.4% of resamples >= 0.7 -> registered rule (lower bound > 0.7): NOT MET
+8h: centred union rho -0.1429 (union of 20), clustered 95% interval [-0.161, -0.060], 0.0% of resamples >= 0.7 -> registered rule (lower bound > 0.7): NOT MET
+written h3_centred_ci.json

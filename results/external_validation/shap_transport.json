@@ -1,0 +1,80 @@
+{
+ "4h": {
+  "internal_auroc": 0.773,
+  "external_auroc": 0.7522,
+  "spearman_rho": 0.9882,
+  "rho_ci": [
+   0.9855,
+   0.9898
+  ],
+  "top5_overlap": 4,
+  "top15_overlap": 12,
+  "rho_physiology_block": 0.9817,
+  "rho_behaviour_block": 0.9939,
+  "behaviour_share_of_attribution_internal": 0.3641,
+  "behaviour_share_of_attribution_external": 0.3635,
+  "top10_internal": [
+   "lactate_time_since_obs_h",
+   "heart_rate_time_since_obs_h",
+   "wbc_time_since_obs_h",
+   "resp_rate_mean",
+   "mbp_abp_time_since_obs_h",
+   "spo2_min",
+   "resp_rate_max",
+   "sbp_nbp_min",
+   "sbp_nbp_max",
+   "sbp_nbp_mean"
+  ],
+  "top10_external": [
+   "lactate_time_since_obs_h",
+   "wbc_time_since_obs_h",
+   "resp_rate_mean",
+   "mbp_abp_time_since_obs_h",
+   "spo2_min",
+   "heart_rate_time_since_obs_h",
+   "resp_rate_max",
+   "sbp_nbp_max",
+   "sbp_nbp_min",
+   "sbp_nbp_mean"
+  ]
+ },
+ "8h": {
+  "internal_auroc": 0.7369,
+  "external_auroc": 0.669,
+  "spearman_rho": 0.9366,
+  "rho_ci": [
+   0.9346,
+   0.9389
+  ],
+  "top5_overlap": 1,
+  "top15_overlap": 9,
+  "rho_physiology_block": 0.952,
+  "rho_behaviour_block": 0.9336,
+  "behaviour_share_of_attribution_internal": 0.3428,
+  "behaviour_share_of_attribution_external": 0.3634,
+  "top10_internal": [
+   "lactate_time_since_obs_h",
+   "wbc_time_since_obs_h",
+   "resp_rate_mean",
+   "spo2_min",
+   "heart_rate_time_since_obs_h",
+   "mbp_nbp_min",
+   "mbp_abp_time_since_obs_h",
+   "resp_rate_trend",
+   "heart_rate_max",
+   "spo2_time_since_obs_h"
+  ],
+  "top10_external": [
+   "heart_rate_trend",
+   "mbp_abp_time_since_obs_h",
+   "resp_rate_trend",
+   "wbc_time_since_obs_h",
+   "dbp_abp_time_since_obs_h",
+   "resp_rate_mean",
+   "lactate_time_since_obs_h",
+   "spo2_trend",
+   "resp_rate_time_since_obs_h",
+   "dbp_nbp_trend"
+  ]
+ }
+}

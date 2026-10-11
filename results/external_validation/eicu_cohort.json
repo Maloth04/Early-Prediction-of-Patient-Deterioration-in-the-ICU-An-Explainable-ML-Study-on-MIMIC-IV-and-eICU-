@@ -1,0 +1,9 @@
+{
+ "eligible_stays": 1455,
+ "stays_with_endpoint": 202,
+ "excluded_pre_landmark": 173,
+ "modelled_stays": 1282,
+ "instances": 17776,
+ "events": 27,
+ "prevalence_pct": 0.1519
+}
