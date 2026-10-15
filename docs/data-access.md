@@ -29,7 +29,18 @@ The cohort flow these datasets should reproduce:
 | Minus escalations before the landmark | **25,400 modelled** |
 
 which yields 263,675 prediction instances and 2,080 events at four hours, a
-prevalence of 0.79 per cent.
+prevalence of 0.79 per cent, from 20,572 distinct patients — the unit the splits
+are taken on.
+
+**The first row is 40 stays short of the table, deliberately.** The v2.2 `icustays`
+table contains 73,181 rows. Two exclusions were applied by the extraction before
+this flow begins and their counts were not retained separately: stays with an age
+under 18 at ICU admission, and stays whose recorded discharge precedes their
+admission. So 73,141 is a post-exclusion total, not the table's row count. If your
+own extraction starts at 73,181 and reaches 25,400 modelled stays, you have
+reproduced the cohort. No figure in the thesis depends on those 40 stays, and
+`tests/test_recorded_results.py` reconciles the flow from 52,128 − 26,728 rather
+than from the first row.
 
 ## eICU
 
@@ -55,6 +66,10 @@ data/
   eicu_features_4h.csv   eICU, built by build_eicu.py
   ...
 ```
+
+`mimic_harm_4h.csv` is the file the decomposition in §4.8.4 and the Appendix E
+table both consume: one row per prediction instance, the 53 physiological and 28
+measurement-behaviour columns, and the binary endpoint.
 
 ## What must never be committed
 

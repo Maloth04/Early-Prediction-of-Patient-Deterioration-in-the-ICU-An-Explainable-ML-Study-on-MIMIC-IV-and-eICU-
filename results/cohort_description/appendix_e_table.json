@@ -1,0 +1,35 @@
+{
+  "_note": "Table E.1 as Appendix E reports it. These are the figures from the original run; the script that produced them was not retained and analysis/cohort_description/appendix_e_table.py is a documented reconstruction of its procedure. See docs/deviation-register.md.",
+  "horizon_hours": 4,
+  "unit": "prediction instance",
+  "instances_total": 263675,
+  "instances_no_event": 261595,
+  "instances_event": 2080,
+  "modelled_stays": 25400,
+  "distinct_patients": 20572,
+  "no_event": {
+    "heart_rate": {"label": "Heart rate, bpm", "window_mean": {"median": 83.5, "q1": 72.5, "q3": 95.7}, "observed_pct": 98.7, "hours_since_last_obs": {"median": 0.53, "q1": 0.27, "q3": 0.8}},
+    "resp_rate": {"label": "Respiratory rate, breaths/min", "window_mean": {"median": 19.1, "q1": 16.9, "q3": 22.0}, "observed_pct": 98.2, "hours_since_last_obs": {"median": 0.55, "q1": 0.27, "q3": 0.82}},
+    "spo2": {"label": "Oxygen saturation, %", "window_mean": {"median": 96.2, "q1": 94.9, "q3": 97.5}, "observed_pct": 98.6, "hours_since_last_obs": {"median": 0.56, "q1": 0.28, "q3": 0.83}},
+    "sbp": {"label": "Systolic blood pressure, mmHg", "window_mean": {"median": 122.6, "q1": 110.6, "q3": 135.7}, "observed_pct": 98.3, "hours_since_last_obs": {"median": 0.59, "q1": 0.29, "q3": 0.9}},
+    "dbp": {"label": "Diastolic blood pressure, mmHg", "window_mean": {"median": 66.6, "q1": 58.8, "q3": 75.3}, "observed_pct": 98.3, "hours_since_last_obs": {"median": 0.59, "q1": 0.29, "q3": 0.9}},
+    "map": {"label": "Mean arterial pressure, mmHg", "window_mean": {"median": 81.3, "q1": 73.0, "q3": 90.4}, "observed_pct": 98.3, "hours_since_last_obs": {"median": 0.59, "q1": 0.29, "q3": 0.9}},
+    "temp_c": {"label": "Temperature, degrees Celsius", "window_mean": {"median": 36.8, "q1": 36.6, "q3": 37.0}, "observed_pct": 98.6, "hours_since_last_obs": {"median": 2.03, "q1": 1.0, "q3": 3.18}},
+    "lactate": {"label": "Lactate, mmol/L", "window_mean": {"median": 1.5, "q1": 1.1, "q3": 2.1}, "observed_pct": 20.1, "hours_since_last_obs": {"median": 42.78, "q1": 23.12, "q3": 89.89}},
+    "creatinine": {"label": "Creatinine, mg/dL", "window_mean": {"median": 0.9, "q1": 0.7, "q3": 1.4}, "observed_pct": 91.5, "hours_since_last_obs": {"median": 9.58, "q1": 4.51, "q3": 17.12}},
+    "wbc": {"label": "White cell count, 10^9/L", "window_mean": {"median": 9.6, "q1": 7.1, "q3": 13.0}, "observed_pct": 90.3, "hours_since_last_obs": {"median": 10.97, "q1": 5.08, "q3": 18.54}}
+  },
+  "event": {
+    "heart_rate": {"label": "Heart rate, bpm", "window_mean": {"median": 88.5, "q1": 76.5, "q3": 101.7}, "observed_pct": 98.8, "hours_since_last_obs": {"median": 0.62, "q1": 0.27, "q3": 0.98}},
+    "resp_rate": {"label": "Respiratory rate, breaths/min", "window_mean": {"median": 20.7, "q1": 17.6, "q3": 24.3}, "observed_pct": 98.7, "hours_since_last_obs": {"median": 0.63, "q1": 0.28, "q3": 0.98}},
+    "spo2": {"label": "Oxygen saturation, %", "window_mean": {"median": 96.0, "q1": 94.6, "q3": 97.3}, "observed_pct": 98.8, "hours_since_last_obs": {"median": 0.63, "q1": 0.28, "q3": 0.99}},
+    "sbp": {"label": "Systolic blood pressure, mmHg", "window_mean": {"median": 116.6, "q1": 104.4, "q3": 132.1}, "observed_pct": 98.4, "hours_since_last_obs": {"median": 0.65, "q1": 0.28, "q3": 1.09}},
+    "dbp": {"label": "Diastolic blood pressure, mmHg", "window_mean": {"median": 63.5, "q1": 55.8, "q3": 72.1}, "observed_pct": 98.4, "hours_since_last_obs": {"median": 0.65, "q1": 0.28, "q3": 1.09}},
+    "map": {"label": "Mean arterial pressure, mmHg", "window_mean": {"median": 77.6, "q1": 69.6, "q3": 87.2}, "observed_pct": 98.4, "hours_since_last_obs": {"median": 0.65, "q1": 0.28, "q3": 1.08}},
+    "temp_c": {"label": "Temperature, degrees Celsius", "window_mean": {"median": 36.8, "q1": 36.6, "q3": 37.0}, "observed_pct": 98.7, "hours_since_last_obs": {"median": 2.41, "q1": 1.09, "q3": 3.76}},
+    "lactate": {"label": "Lactate, mmol/L", "window_mean": {"median": 1.6, "q1": 1.2, "q3": 2.4}, "observed_pct": 45.9, "hours_since_last_obs": {"median": 22.17, "q1": 3.55, "q3": 51.26}},
+    "creatinine": {"label": "Creatinine, mg/dL", "window_mean": {"median": 1.0, "q1": 0.7, "q3": 1.7}, "observed_pct": 96.0, "hours_since_last_obs": {"median": 8.29, "q1": 4.4, "q3": 13.46}},
+    "wbc": {"label": "White cell count, 10^9/L", "window_mean": {"median": 10.5, "q1": 7.7, "q3": 14.4}, "observed_pct": 95.6, "hours_since_last_obs": {"median": 8.99, "q1": 4.55, "q3": 14.63}}
+  },
+  "what_this_shows": "The physiological separation between the two groups is modest (median heart rate 83.5 against 88.5; median systolic pressure 122.6 against 116.6). The separation in whether a variable was measured at all is not: lactate is recorded in 20.1 per cent of non-event windows and 45.9 per cent of event windows, and the median time since the last lactate falls from 42.78 hours to 22.17. That is the Section 4.8.4 decomposition visible before any model is fitted."
+}

@@ -141,3 +141,81 @@ class TestNews2Constructions:
         is not. This is what keeps Section 4.3.5's argument standing."""
         for name in ("mean", "end"):
             assert abs(table[name]["auroc"] - table["worst"]["auroc"]) < 0.05
+
+
+class TestAppendixETable:
+    """Table E.1, the modelled-cohort baseline table Appendix D had recorded as
+    undelivered. The figures are pinned because the script that produced them was
+    not retained, so this file is the only record of them inside the package."""
+
+    @pytest.fixture(scope="class")
+    @staticmethod
+    def tab() -> dict:
+        return load("cohort_description/appendix_e_table.json")
+
+    def test_the_instance_counts_reconcile(self, tab):
+        assert tab["instances_no_event"] + tab["instances_event"] == tab["instances_total"]
+
+    def test_the_counts_are_the_ones_the_thesis_reports(self, tab):
+        assert tab["instances_total"] == 263675
+        assert tab["instances_event"] == 2080
+        assert tab["modelled_stays"] == 25400
+        assert tab["distinct_patients"] == 20572
+
+    def test_one_positive_instance_per_event_bearing_stay(self, tab):
+        """A stay exits the risk set on its first event (Section 3.2.2), so the
+        positive instances, the stays that carry an event and the events are the
+        same 2,080 things. Any drift here would break that identity."""
+        assert tab["instances_event"] == 2080
+        assert tab["distinct_patients"] < tab["modelled_stays"]
+
+    def test_both_groups_describe_the_same_ten_predictors(self, tab):
+        assert set(tab["no_event"]) == set(tab["event"])
+        assert len(tab["no_event"]) == 10
+
+    def test_every_quoted_interval_is_ordered(self, tab):
+        for group in ("no_event", "event"):
+            for stem, row in tab[group].items():
+                for key in ("window_mean", "hours_since_last_obs"):
+                    iqr = row.get(key)
+                    if iqr is None:
+                        continue
+                    assert iqr["q1"] <= iqr["median"] <= iqr["q3"], f"{group}/{stem}/{key}"
+
+    def test_observation_rates_are_percentages(self, tab):
+        for group in ("no_event", "event"):
+            for stem, row in tab[group].items():
+                assert 0.0 <= row["observed_pct"] <= 100.0, f"{group}/{stem}"
+
+    def test_the_physiological_separation_is_modest(self, tab):
+        """Appendix E's first claim. Both medians sit inside the other group's
+        inter-quartile range, which is what 'modest' has to mean here."""
+        for stem in ("heart_rate", "sbp"):
+            a = tab["no_event"][stem]["window_mean"]
+            b = tab["event"][stem]["window_mean"]
+            assert a["q1"] <= b["median"] <= a["q3"], stem
+            assert b["q1"] <= a["median"] <= b["q3"], stem
+
+    def test_the_measurement_separation_is_not(self, tab):
+        """Appendix E's second claim, and the one that bears on the thesis's
+        principal finding: lactate is ordered more than twice as often before an
+        event, and the last one is less than half as old."""
+        no_event = tab["no_event"]["lactate"]
+        event = tab["event"]["lactate"]
+        assert event["observed_pct"] > 2 * no_event["observed_pct"]
+        assert (
+            event["hours_since_last_obs"]["median"]
+            < 0.6 * no_event["hours_since_last_obs"]["median"]
+        )
+
+    def test_continuously_monitored_channels_are_observed_almost_always(self, tab):
+        """The contrast only means something because the vitals do not show it.
+        Recency carries the signal where the presence indicator cannot."""
+        for stem in ("heart_rate", "resp_rate", "spo2", "sbp", "dbp", "map", "temp_c"):
+            for group in ("no_event", "event"):
+                assert tab[group][stem]["observed_pct"] > 98.0, f"{group}/{stem}"
+
+    def test_the_laboratory_variables_are_the_discretionary_ones(self, tab):
+        for stem in ("lactate", "creatinine", "wbc"):
+            assert tab["no_event"][stem]["observed_pct"] < 98.0, stem
+            assert tab["event"][stem]["observed_pct"] > tab["no_event"][stem]["observed_pct"], stem

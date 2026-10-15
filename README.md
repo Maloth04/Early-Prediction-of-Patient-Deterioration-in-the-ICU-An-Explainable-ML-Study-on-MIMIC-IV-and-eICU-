@@ -215,6 +215,22 @@ every condition. And because AUROC − 0.5 is not additive, shares summing past 
 is expected arithmetic describing redundancy, not a discovery: the honest statement
 is that either block can be dropped for 0.05–0.07 AUROC and neither is necessary.
 
+The same contrast is visible before any model is fitted, in the modelled cohort's
+own descriptives (Table E.1, `results/cohort_description/`):
+
+| At the 4-hour landmark | No event | Event |
+|---|---:|---:|
+| Heart rate, median of window means | 83.5 | 88.5 |
+| Systolic pressure, median of window means | 122.6 | 116.6 |
+| **Lactate observed at all in the window** | **20.1 %** | **45.9 %** |
+| **Median hours since the last lactate** | **42.78** | **22.17** |
+
+The physiological medians sit inside each other's inter-quartile ranges. The
+measurement figures do not come close: lactate is ordered more than twice as often
+before an event and the last one is less than half as old. Table E.1 is a
+description and not a result, which is exactly why it is useful here — the
+decomposition is not an artefact of the learner.
+
 ### 4.5 Against the clinical benchmark (Table 4.10) — exploratory
 
 | Predictor | AUROC 4 h | AUROC 8 h | AUPRC 4 h |
@@ -310,6 +326,17 @@ Two limitations are load-bearing and stated wherever they matter:
   reproduced here and the fill rule for unobserved hours is not recoverable. §3.5
   shows the argument holds under all three candidate rules.
 
+A third artefact was lost to the same habit and is recorded separately because it
+is not a third limitation: the script behind Table E.1 was not retained either, but
+every step of that table is determined by its own caption, so
+`analysis/cohort_description/appendix_e_table.py` is an exact reconstruction rather
+than a guess and the figure still reproduces from data. The thesis states two
+limitations, and that stays accurate — only those two stop a figure reproducing.
+[docs/deviation-register.md](docs/deviation-register.md) records all three, and
+[docs/archiving-checklist.md](docs/archiving-checklist.md) is the response: nothing
+was archived while it was being produced, so three artefacts went the same way
+rather than three different ways.
+
 Two known defects are published as they ran, so the reported counts reproduce from
 the code: the eICU ventilation and cardioversion mappings (Appendix B.3 gives the
 corrected rule), and a NEWS2 band-boundary error found by this repository's test
@@ -318,7 +345,7 @@ for both; [CHANGELOG.md](CHANGELOG.md) records what each changes and what it doe
 not.
 
 Every script's output is recorded in `results/` so a reported number can be checked
-without re-running anything and without PhysioNet access. The 79 tests in `tests/`
+without re-running anything and without PhysioNet access. The 89 tests in `tests/`
 need neither data nor a deep-learning stack and run in about two seconds; they
 recompute the Appendix B.4 calculus from first principles, reconcile the cohort
 counts, pin the registered thresholds, and check the NEWS2 bands case by case
@@ -335,10 +362,11 @@ analysis/        the thesis analyses, published exactly as they ran, by area
   benchmark/             NEWS2 reconstruction and its three constructions
   endpoint_validity/     deaths, corrected endpoint, temporal transport
   sensitivity/           imputation, stay length, error analysis, decision curves
+  cohort_description/    Table E.1, the modelled cohort by outcome
   figures/               Figures 4.1–4.3 from the tables they report
 results/         each script's recorded output, mirroring analysis/
 src/             the functions several analyses share, lifted so they can be tested
-tests/           79 data-free checks
+tests/           89 data-free checks
 docs/            deviation register, reproducibility, data access, decisions log
 config.yaml      every setting and threshold, validated on load
 ```

@@ -4,6 +4,45 @@ Notable changes to the analysis code. Figures reported in the thesis are fixed a
 `v1.0.0`; anything that would change a reported number is recorded here with what
 it changes and what it does not.
 
+## [1.1.0] — 2026-10-15
+
+Catches the repository up with corrections made to the thesis after the first
+release. Nothing here changes a figure the thesis reports.
+
+### Added
+- `analysis/cohort_description/appendix_e_table.py` and
+  `results/cohort_description/appendix_e_table.json`: Table E.1, the modelled
+  cohort's predictor distributions and observation rates by outcome, which
+  Appendix D had recorded as an undelivered TRIPOD+AI commitment and Appendix E
+  now delivers in part. Ten tests pin the figures and the two claims the appendix
+  makes from them — that the physiological separation between outcome groups is
+  modest, each group's median sitting inside the other's inter-quartile range,
+  and that the separation in whether a variable was measured is not: lactate is
+  recorded in 20.1 per cent of non-event windows against 45.9 per cent of event
+  windows, and the median time since the last one falls from 42.78 hours to 22.17.
+- The 40-stay reconciliation in `docs/data-access.md`. The cohort flow starts at
+  73,141 where the v2.2 `icustays` table holds 73,181 rows; two exclusions applied
+  before the flow begins account for the difference, and an unexplained 40 reads
+  as a silent filter.
+- Six decisions in `docs/decisions-log.md`, including the replacement failure
+  region for §5.8 and why the Appendix E retention failure is recorded without
+  becoming a third reproducibility limitation.
+
+### Changed
+- `docs/deviation-register.md`: the modelled-cohort baseline table moves from
+  "Not delivered" to "Delivered in part, in Appendix E", with the demographic half
+  still recorded as undelivered because age, sex and first care unit are not
+  recoverable from the retained matrices.
+- `docs/reproducibility.md`: a third retention failure is disclosed — the Appendix
+  E script was not kept either — and kept deliberately separate from the two
+  limitations. The GRU fill rule is unknowable; Table E.1's procedure is fully
+  determined by its own caption, so the published script is an exact
+  reconstruction and the figure still reproduces from data.
+
+### Known, and unchanged
+- The thesis still states **two** limitations, not three, and that remains
+  accurate: only those two stop a figure reproducing.
+
 ## [1.0.0] — 2026-10-11
 
 First public release: the code accompanying the submitted thesis, reorganised into

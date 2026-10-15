@@ -19,6 +19,7 @@ known, load-bearing, and stated in the thesis itself.
 | | The three constructions of that score, which separate the saturation from the discrimination | §4.3.5 |
 | `analysis/endpoint_validity/` | Deaths as non-events, the corrected endpoint, temporal transport, the disagreement rule and its circularity test, the landmark blanking test | §4.8.8, §4.9.1, §4.10, §4.11 |
 | `analysis/sensitivity/` | Imputation and stay-length sensitivity, error analysis, decision curves, subgroup paired tests | §4.4.1, §4.7, §4.8.1–4.8.3, §4.9 |
+| `analysis/cohort_description/` | Table E.1, the modelled cohort's predictor distributions and observation rates by outcome | App. E |
 | `analysis/figures/` | Figures 4.1 to 4.3 from the tables they report | — |
 
 Each script's output is recorded in `results/` under the same directory name, so a
@@ -61,6 +62,28 @@ The 24 × 14 hourly tensors were built outside this package and not kept. So:
   training-split median — because all three leave the pattern of measurement
   implicitly recoverable from the input while encoding it in no channel. The thesis
   does not depend on which was used.
+
+### A third retention failure, which is not a third limitation
+
+The script that produced Table E.1 was also not retained. It is kept separate from
+the two above, and the thesis still states two limitations rather than three,
+because the distinction is real and not presentational: the GRU fill rule is
+**unknowable**, so no care reproduces the original, whereas every step of Table E.1
+is determined by its own caption — the within-window mean of each variable
+summarised across instances, the observation rate, and the median and IQR of time
+since last observation over the instances where the variable was observed. Given
+the same feature matrix, `analysis/cohort_description/appendix_e_table.py` is exact
+rather than approximate.
+
+It is labelled a reconstruction in its own header, the original figures are recorded
+in `results/cohort_description/appendix_e_table.json`, and ten tests pin them. If
+you re-run it and a figure differs, the difference is in the extraction rather than
+in the arithmetic; open an issue with both numbers.
+
+The pattern across all three is the point, and
+[archiving-checklist.md](archiving-checklist.md) is the response to it: nothing was
+archived while it was being produced, so three separate artefacts were lost to the
+same habit rather than to three different accidents.
 
 ### The H1 confound
 
